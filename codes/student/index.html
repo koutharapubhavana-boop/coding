@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INTRODUCTION PAGE -->
+    <div class="container" id="introPage">
+
+        <h1>🎓 Student Result Calculator</h1>
+
+        <p class="welcome">
+            Welcome to the Student Result Calculator!
+        </p>
+
+        <p>
+            This system helps students calculate their academic performance
+            easily and provides useful suggestions to improve their marks.
+        </p>
+
+        <h2>📋 Instructions</h2>
+
+        <ul>
+            <li>Enter the student's name.</li>
+            <li>Enter marks for all five subjects.</li>
+            <li>Marks should be between 0 and 100.</li>
+            <li>Make sure all marks are entered correctly.</li>
+            <li>Click the <b>Calculate Result</b> button.</li>
+            <li>The system will calculate total marks, average, percentage and grade.</li>
+            <li>The system will also display Pass or Fail.</li>
+            <li>Personalized suggestions will be provided based on your marks.</li>
+            <li>Subjects with lower marks will be shown for improvement.</li>
+        </ul>
+
+        <h2>📚 Tips to Get Good Marks</h2>
+
+        <ul>
+            <li>Study regularly instead of studying only before exams.</li>
+            <li>Give extra time to difficult subjects.</li>
+            <li>Practice previous questions and important problems.</li>
+            <li>Revise the topics you study every day.</li>
+            <li>Follow a simple daily study timetable.</li>
+            <li>Take short breaks while studying.</li>
+            <li>Ask your teachers when you do not understand a topic.</li>
+            <li>Try to improve your marks in every examination.</li>
+        </ul>
+
+        <button onclick="showCalculator()">
+            Start Calculator
+        </button>
+
+    </div>
+
+
+    <!-- CALCULATOR PAGE -->
+    <div class="container hidden" id="calculatorPage">
+
+        <h1>📝 Enter Student Details</h1>
+
+        <label>Student Name</label>
+        <input type="text" id="name" placeholder="Enter student name">
+
+
+        <label>English Marks</label>
+        <input type="number" id="english" placeholder="0 - 100" min="0" max="100">
+
+
+        <label>Telugu Marks</label>
+        <input type="number" id="telugu" placeholder="0 - 100" min="0" max="100">
+
+
+        <label>Hindi Marks</label>
+        <input type="number" id="hindi" placeholder="0 - 100" min="0" max="100">
+
+
+        <label>Science Marks</label>
+        <input type="number" id="science" placeholder="0 - 100" min="0" max="100">
+
+
+        <label>Maths Marks</label>
+        <input type="number" id="maths" placeholder="0 - 100" min="0" max="100">
+
+
+        <button onclick="calculateResult()">
+            Calculate Result
+        </button>
+
+        <button class="backButton" onclick="showIntroduction()">
+            ← Back
+        </button>
+
+    </div>
+
+
+    <!-- RESULT PAGE -->
+    <div class="container hidden" id="resultPage">
+
+        <h1>📊 Student Result</h1>
+
+        <div id="result"></div>
+
+        <button onclick="showCalculator()">
+            Calculate Another Result
+        </button>
+
+        <button class="backButton" onclick="showIntroduction()">
+            🏠 Introduction
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

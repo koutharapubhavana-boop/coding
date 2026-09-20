@@ -1,0 +1,9 @@
+body {
+    background-color: lightblue;
+}
+
+.registration-box {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+}

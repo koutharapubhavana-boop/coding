@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INTRODUCTION PAGE -->
+
+    <div class="quiz-container" id="introPage">
+
+        <h1>Online Quiz</h1>
+
+        <p class="welcome">
+            Welcome to the Online Quiz!
+        </p>
+
+        <p>
+            Test your knowledge by answering the questions within
+            the given time. You can move between questions and
+            change your answers before submitting the quiz.
+        </p>
+
+        <h2>Instructions</h2>
+
+        <ul>
+            <li>Read each question carefully.</li>
+            <li>Select one answer for each question.</li>
+            <li>You have <b>60 seconds</b> to complete the quiz.</li>
+            <li>You can use Previous and Next to move between questions.</li>
+            <li>You can change your answer before submitting.</li>
+            <li>Each correct answer gets <b>1 mark</b>.</li>
+            <li>There is no negative marking.</li>
+            <li>The quiz automatically ends when the timer reaches zero.</li>
+        </ul>
+
+        <h2>Tips to Get Good Marks</h2>
+
+        <ul>
+            <li>Read every question carefully.</li>
+            <li>Do not spend too much time on one question.</li>
+            <li>Revise important concepts regularly.</li>
+            <li>Practice quizzes frequently.</li>
+            <li>Review your mistakes.</li>
+            <li>Focus more on difficult topics.</li>
+        </ul>
+
+        <button onclick="startQuiz()">
+            Start Quiz
+        </button>
+
+    </div>
+
+
+    <!-- QUIZ PAGE -->
+
+    <div class="quiz-container hidden" id="quizPage">
+
+        <h1>Online Quiz</h1>
+
+        <div class="timer">
+            Time Left:
+            <span id="time">30</span> seconds
+        </div>
+
+        <h2 id="question">
+            Question
+        </h2>
+
+
+        <div class="options">
+
+            <button id="option1" onclick="selectAnswer(0)">
+            </button>
+
+            <button id="option2" onclick="selectAnswer(1)">
+            </button>
+
+            <button id="option3" onclick="selectAnswer(2)">
+            </button>
+
+            <button id="option4" onclick="selectAnswer(3)">
+            </button>
+
+        </div>
+
+
+        <p id="questionNumber"></p>
+
+
+        <!-- NAVIGATION BUTTONS -->
+
+        <div class="navigation">
+
+            <button
+                id="previousButton"
+                onclick="previousQuestion()">
+                ← Previous
+            </button>
+
+            <button
+                id="nextButton"
+                onclick="nextQuestion()">
+                Next →
+            </button>
+
+        </div>
+
+
+        <button
+            id="submitButton"
+            class="submitButton"
+            onclick="endQuiz()">
+            Submit Quiz
+        </button>
+
+    </div>
+
+
+    <!-- RESULT PAGE -->
+
+    <div class="quiz-container hidden" id="resultPage">
+
+        <h1>Quiz Result</h1>
+
+        <div id="result"></div>
+
+        <button onclick="startQuiz()">
+            Try Again
+        </button>
+
+        <button class="homeButton" onclick="showIntroduction()">
+            Introduction
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>Login</h1>
+
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <button id="loginButton">Login</button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let loginButton = document.getElementById("loginButton");
+        let message = document.getElementById("message");
+
+        loginButton.addEventListener("click", function() {
+
+            let user = username.value;
+            let pass = password.value;
+
+            if (user == "bhavana" && pass == "1234") {
+
+                message.innerHTML = "Login Successful";
+                message.style.color = "green";
+
+            } else {
+
+                message.innerHTML = "Login Unsuccessful";
+                message.style.color = "red";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

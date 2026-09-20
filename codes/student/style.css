@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px gray;
+}
+
+
+/* HIDE PAGE */
+
+.hidden {
+    display: none;
+}
+
+
+/* HEADINGS */
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #444;
+    margin-top: 25px;
+}
+
+
+/* INTRODUCTION */
+
+.welcome {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a4de7;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/* INSTRUCTIONS */
+
+ul {
+    line-height: 1.8;
+    padding-left: 25px;
+}
+
+
+/* FORM */
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #4a4de7;
+    outline: none;
+}
+
+
+/* BUTTON */
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4a4de7;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3033b8;
+}
+
+
+/* BACK BUTTON */
+
+.backButton {
+    background-color: #777;
+}
+
+.backButton:hover {
+    background-color: #555;
+}
+
+
+/* RESULT */
+
+#result {
+    background-color: #f5f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+#result h2 {
+    color: #4a4de7;
+    text-align: center;
+}
+
+#result h3 {
+    color: #333;
+}
+
+.good {
+    color: green;
+    font-weight: bold;
+}
+
+.fail {
+    color: red;
+    font-weight: bold;
+}
+
+.improvement {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+}

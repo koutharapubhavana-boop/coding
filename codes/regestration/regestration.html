@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Registration Form</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .registration-box {
+            background-color: white;
+            width: 350px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        #message {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="registration-box">
+
+        <h1>Registration Form</h1>
+
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password">
+
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Enter your age">
+
+        <button id="registerButton">Register</button>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <script>
+
+        let nameInput = document.getElementById("name");
+        let email = document.getElementById("email");
+        let userName = nameInput.value;
+        let password = document.getElementById("password");
+        let confirmPassword = document.getElementById("confirmPassword");
+        let age = document.getElementById("age");
+
+        let registerButton = document.getElementById("registerButton");
+        let message = document.getElementById("message");
+
+
+        registerButton.addEventListener("click", function() {
+
+            let userName = name.value;
+            let userEmail = email.value;
+            let userUsername = username.value;
+            let userPassword = password.value;
+            let userConfirmPassword = confirmPassword.value;
+            let userAge = age.value;
+
+
+            if (userName == "" || userEmail == "" || userUsername == "" ||
+                userPassword == "" || userConfirmPassword == "" || userAge == "") {
+
+                message.innerHTML = "Please fill all fields";
+                message.style.color = "red";
+
+            }
+
+            else if (userPassword != userConfirmPassword) {
+
+                message.innerHTML = "Passwords do not match";
+                message.style.color = "red";
+
+            }
+
+            else if (userAge < 18) {
+
+                message.innerHTML = "Age must be 18 or above";
+                message.style.color = "red";
+
+            }
+
+            else {
+
+                message.innerHTML = "Registration Successful";
+                message.style.color = "green";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
